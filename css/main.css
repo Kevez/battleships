@@ -1,0 +1,304 @@
+/* Keyframe goodness */
+* {
+  margin: 0 auto;
+  padding: 0;
+  font: 12px 'Carrois Gothic SC', verdana;
+}
+body {
+  background: #BBC8D3;
+}
+.grey-border {
+  border: 1px solid #ADADAD;
+}
+.center-text {
+  text-align: center;
+}
+.isometric {
+  -webkit-transform: rotate(30deg) skewx(-30deg) skewy(0deg);
+  -moz-transform: rotate(30deg) skewx(-30deg) skewy(0deg);
+  transform: rotate(30deg) skewx(-30deg) skewy(0deg);
+  /* Maybe one day eh? */
+
+}
+.skew-canvas {
+  -webkit-transform: skewx(31deg);
+  -moz-transform: skewx(31deg);
+  transform: skewx(31deg);
+}
+.skew-board {
+  -webkit-transform: skewy(-30deg);
+  -moz-transform: skewy(-30deg);
+  transform: skewy(-30deg);
+}
+h2 {
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+}
+p {
+  width: 100%;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+#wrap {
+  display: none;
+  position: relative;
+  margin-top: 50px;
+  width: 960px;
+  border: 1px solid #7E7E7E;
+  text-align: left;
+  overflow: hidden;
+}
+#preloader {
+  margin: 100px auto 0 auto;
+  padding: 10px 0 10px 0;
+  width: 300px;
+  border: 1px solid #999;
+  text-align: center;
+}
+.grid {
+  -webkit-transform: rotate(30deg) skewx(-30deg) skewy(0deg);
+  -moz-transform: rotate(30deg) skewx(-30deg) skewy(0deg);
+  transform: rotate(30deg) skewx(-30deg) skewy(0deg);
+  /* Maybe one day eh? */
+
+  float: left;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #3D3D3D;
+  border-right: 0;
+  border-bottom: 0;
+  overflow: hidden;
+}
+.grid .tile {
+  position: relative;
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: #65BFC7;
+  border-right: 1px solid #3D3D3D;
+  border-bottom: 1px solid #3D3D3D;
+  text-align: center;
+}
+.grid .tile canvas {
+  -webkit-transform: skewx(31deg);
+  -moz-transform: skewx(31deg);
+  transform: skewx(31deg);
+  position: absolute;
+  top: -2px;
+  left: -4px;
+}
+.grid .tile:hover {
+  background: #1E97A2;
+}
+.grid .shipPart1 {
+  background: #333 !important;
+}
+.grid .shipPart0 {
+  background: ##65BFC7 !important;
+}
+.grid .destroyed {
+  background: #992222 !important;
+}
+#p1 {
+  position: absolute;
+  top: 31px;
+  left: 113px;
+  background: #ccc;
+}
+#cpu {
+  position: absolute;
+  top: 31px;
+  right: 113px;
+  background: #bbb;
+}
+#cpu .light {
+  display: none;
+}
+#playing-area {
+  position: relative;
+  float: left;
+  width: 960px;
+  height: 345px;
+  border-top: 1px solid #9E9E9E;
+  border-bottom: 1px solid #9E9E9E;
+  box-shadow: 1px 1px 11px #c9c9c9 inset;
+}
+#p1board {
+  -webkit-transform: skewy(-30deg);
+  -moz-transform: skewy(-30deg);
+  transform: skewy(-30deg);
+  position: absolute;
+  top: 55px;
+  left: 5px;
+  width: 136px;
+  height: 70px;
+  border: 1px solid #666;
+  background: #BBD8D3;
+  font-size: 11px;
+}
+#cpuboard {
+  -webkit-transform: skewy(-30deg);
+  -moz-transform: skewy(-30deg);
+  transform: skewy(-30deg);
+  position: absolute;
+  top: 58px;
+  left: 488px;
+  width: 122px;
+  height: 70px;
+  background: #FFBEBE;
+  border: 1px solid #666;
+  font-size: 11px;
+}
+#cpu-brain {
+  border: 1px solid #ADADAD;
+  position: absolute;
+  top: 311px;
+  left: 151px;
+  width: 160px;
+  height: 13px;
+  text-align: center;
+  box-shadow: 1px 1px 10px #D4D4D4;
+}
+#p1-feedback {
+  position: absolute;
+  top: 311px;
+  left: 636px;
+  width: 160px;
+  height: 13px;
+  border: 1px solid #ADADAD;
+  text-align: center;
+  box-shadow: 1px 1px 10px #D4D4D4;
+}
+footer {
+  clear: both;
+  text-align: center;
+}
+/* Keyframe goodness */
+@-webkit-keyframes chaos {
+  0% {
+    top: 2px;
+  }
+  10% {
+    top: 4px;
+    left: 2px;
+  }
+  20% {
+    top: -4px;
+    left: -1px;
+  }
+  30% {
+    top: -5px;
+    left: 3px;
+  }
+  40% {
+    top: 2px;
+    left: -2px;
+  }
+  50% {
+    top: 1px;
+    left: 2px;
+  }
+  60% {
+    top: -2px;
+    left: 3px;
+  }
+  70% {
+    top: -3px;
+    left: 1px;
+  }
+  80% {
+    top: 5px;
+    left: -1px;
+  }
+  90% {
+    top: 1px;
+    left: 1px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+.chaos {
+  -webkit-animation: chaos 0.5s;
+}
+@-webkit-keyframes splash {
+  0% {
+    border-radius: 5px;
+  }
+  10% {
+    border-radius: 4px;
+  }
+  20% {
+    border-radius: 3px;
+  }
+  30% {
+    border-radius: 2px;
+  }
+  40% {
+    border-radius: 3px;
+  }
+  60% {
+    border-radius: 4px;
+  }
+  80% {
+    border-radius: 5px;
+  }
+  100% {
+    border-radius: 5px;
+  }
+}
+.splash {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  background: #1E97A2;
+  -webkit-animation: splash 1s infinite;
+  box-shadow: 1px 1px 20px #fff;
+}
+/* Keyframe goodness */
+@-webkit-keyframes light {
+  0% {
+    background: #ff1111;
+  }
+  20% {
+    background: #dd1111;
+  }
+  40% {
+    background: #bb1111;
+  }
+  60% {
+    background: #991111;
+  }
+  80% {
+    background: #bb1111;
+  }
+  90% {
+    background: #dd1111;
+  }
+  0% {
+    background: #ee1111;
+  }
+}
+.light {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 5px;
+  height: 5px;
+  background: #ff1111;
+  -webkit-animation: light 1s infinite;
+  box-shadow: 1px 1px 20px #fff;
+}
+canvas#main-menu {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: #333;
+}
